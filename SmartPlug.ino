@@ -19,11 +19,11 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- ***********************************************************************/
+***********************************************************************/
 #include <FS.h>               // https://github.com/esp8266/Arduino/blob/master/cores/esp8266/FS.h
 #include <WiFiManager.h>      // https://github.com/tzapu/WiFiManager
 #include <ESP8266mDNS.h>      // https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266mDNS
-#include <ESP8266WebServer.h> // https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WebServer 
+#include <ESP8266WebServer.h> // https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WebServer
 #include <ACS712.h>           // https://github.com/RobTillaart/ACS712
 
 #define DEBUG
@@ -60,8 +60,7 @@ inline void setPlug() { // Turns the plug on/off
   digitalWrite(RELAY, state);
   digitalWrite(LED, state);
   digitalWrite(MINILED, state);
-  debug("New state ");
-  debug(state);
+  debug("New state " + state);
   if (state == ON) {
     calibrationDone = 0;
   }
